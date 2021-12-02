@@ -1,0 +1,7 @@
+---
+ - name: check_system_version
+   hosts: all
+   gather_facts: true
+   tasks:
+         - name: check
+           

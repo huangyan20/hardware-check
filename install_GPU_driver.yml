@@ -1,0 +1,33 @@
+---
+ - name: install GPU driver
+   hosts: localhost
+   gather_facts: false
+   #become: yes
+   #become_method: su
+   #become_user: root
+   tasks:
+         - name: set DNS
+           shell: |
+             sed -i 's/#DNS=/DNS=114.114.114.114/g' /etc/systemd/resolved.conf
+             mv /etc/resolv.conf /etc/resolv.conf.bak
+             ln -s /run/systemd/resolve/resolv.conf /etc/
+         - name: restart systemd-resolved
+           systemd: 
+             name: systemd-resolved
+             state: restarted
+             enabled: yes
+         - name: set timezone shanghai
+           shell: timedatectl set-timezone Asia/Shanghai
+         - name: set ppa
+           apt_repository: 
+             repo: ppa:graphics-drivers
+         - name: apt update
+           apt: 
+             update_cache: yes
+         - name: install GPU
+           apt:
+             #驱动名称根据情况不同而更改 
+             name: nvidia-driver-495
+         #情况而定是否重启
+         #- name: reboot
+         #  reboot: 

@@ -1,0 +1,15 @@
+---
+ - name: remove GPU driver
+   hosts: all
+   gather_facts: false
+   become: yes
+   become_method: su
+   become_user: root
+   tasks: 
+         - name: remove GPU driver
+           apt: 
+            name: '*nvidia*'
+            state: absent
+            autoremove: yes
+         #- name: reboot
+         #  reboot: 
