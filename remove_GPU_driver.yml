@@ -11,5 +11,5 @@
             name: '*nvidia*'
             state: absent
             autoremove: yes
-         #- name: reboot
-         #  reboot: 
+         - name: reboot
+           reboot: 
