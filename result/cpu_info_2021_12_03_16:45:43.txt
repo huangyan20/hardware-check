@@ -1,0 +1,6 @@
+192.168.122.238 | CHANGED | rc=0 >>
+Socket(s):2
+Modelname:IntelCoreProcessor(Broadwell,IBRS)
+192.168.122.65 | CHANGED | rc=0 >>
+Socket(s):2
+Modelname:IntelCoreProcessor(Broadwell,IBRS)

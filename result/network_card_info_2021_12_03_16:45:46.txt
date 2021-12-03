@@ -1,0 +1,6 @@
+192.168.122.238 | CHANGED | rc=0 >>
+Settings for enp1s0:
+	Speed: Unknown!
+192.168.122.65 | CHANGED | rc=0 >>
+Settings for enp1s0:
+	Speed: Unknown!

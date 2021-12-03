@@ -1,0 +1,4 @@
+192.168.122.65 | CHANGED | rc=0 >>
+
+192.168.122.238 | CHANGED | rc=0 >>
+AttachedGPUs:1

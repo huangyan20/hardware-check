@@ -1,6 +1,6 @@
 ---
  - name: install GPU driver
-   hosts: localhost
+   hosts: all
    gather_facts: false
    #become: yes
    #become_method: su
@@ -29,5 +29,5 @@
              #驱动名称根据情况不同而更改 
              name: nvidia-driver-495
          #情况而定是否重启
-         - name: reboot
-           reboot: 
+         #- name: reboot
+         #  reboot: 
